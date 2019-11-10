@@ -1,0 +1,32 @@
+//student class implementing csvprintable
+class Student implements CSVPrintable{
+
+	int studentId;//student id
+	long phoneNumber;//phone number of student
+	String studentName;//student name
+
+@Override
+//get the name of the student
+public String getName() {
+
+	return this.studentName;
+
+}
+
+@Override
+public int getId() {
+
+	//get the student id
+	return this.studentId;
+
+}
+
+@Override
+public void csvPrintln(PrintWriter out) { //write out student to file{
+
+	out.println(getName() + ", " + getId() + ", " + phoneNumber);
+	out.flush();
+
+}
+
+}

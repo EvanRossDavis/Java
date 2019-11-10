@@ -1,0 +1,20 @@
+//TA extending student
+class TA extends Student{
+
+public int getId() {
+	
+	//get the id
+	return this.studentId;
+
+}
+
+//print the ta to output file
+@Override
+public void csvPrintln(PrintWriter out) {
+
+	out.println(getName() + ", " + getId() + ", " + phoneNumber);
+	out.flush();
+
+	}
+
+}
